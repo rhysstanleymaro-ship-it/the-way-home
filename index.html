@@ -925,7 +925,7 @@ const flat = a => [].concat(...a);
 const choice = (l, say, go, act) => ({ l, say: ['her', say], go, act });
 const ST = {
   ask: () => ({ sc: 'street', jeep: 'arrive', say: '13c! cmall, ayala, colon!', lines: [['drv', '13c! 13c! cmall, ayala, colon!'], ['drv', 'mosakay mo dong?'], ['him', 'mo-agi ni og fampark?'], ['drv', 'oo, mo-agi ni']],
-    choices: [choice('sige, sakay ta', 'sige, sakay ta', 'y1'), choice('no - dili lang diay', 'dili lang diay', 'n1')] }),
+    choices: [choice('sige, sakay ta', 'sige, sakay ta', 'y1'), choice('dili lang diay', 'dili lang diay', 'n1')] }),
   y1: () => ({ sc: 'street', jeep: 'stop', lines: [['him', 'pagtan-aw sa agian'], ['drv', 'gunit tarong']], next: 'y2' }),
   y2: () => ({ sc: 'jeep', s: 0, jeepOff: true, lines: [['her', 'daghana buhatonon'], ['him', 'lage, love'], ['her', 'gikapoy nako'], ['him', 'bawi lng ta rest, eat nya ta fries sa house'], ['her', 'yay']], next: 'y3' }),
   y3: () => ({ sc: 'jeep', s: 1, lines: [['her', 'sleepy ko, baby'], ['him', 'sandig lng'], ['her', '...'], ['him', '...'], ['nar', 'a comfortable silence']], next: 'y4' }),
